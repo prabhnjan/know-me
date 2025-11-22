@@ -5,33 +5,35 @@ export function About() {
   return (
     <section id="about" className="py-20 px-6 bg-neutral-50">
       <div className="max-w-5xl mx-auto">
-        <motion.div
+        <div className="flex items-center gap-4 mb-8">
+          <SectionIcon type="about" />
+          <motion.h2 
+            className="text-neutral-900"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            About Me
+          </motion.h2>
+        </div>
+        <motion.div 
+          className="space-y-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="flex items-center gap-4 mb-8">
-            <SectionIcon type="about" />
-            <h2 className="text-neutral-900">About Me</h2>
-          </div>
-          <div className="space-y-4 text-neutral-600">
-            <p>
-              I'm a Product Manager with a passion for building enterprise solutions that solve 
-              real business problems. With experience spanning healthcare supply chain management 
-              and HR technology platforms, I specialize in taking products from concept to market.
-            </p>
-            <p>
-              My approach combines deep technical understanding with user-centric design thinking. 
-              I believe in data-driven decision making, rapid prototyping, and close collaboration 
-              with engineering teams to deliver products that users love.
-            </p>
-            <p>
-              Currently, I'm focused on building innovative HR tech solutions and exploring the 
-              intersection of AI and product management. When I'm not working on products, you'll 
-              find me walking outdoors or swimming.
-            </p>
-          </div>
+          <p className="text-neutral-600">
+            I'm a product manager with deep expertise in enterprise healthcare and HR technology. 
+            My career began in healthcare supply chain, where I built solutions that streamlined 
+            operations for hospitals and healthcare providers.
+          </p>
+          <p className="text-neutral-600">
+            Currently, I'm focused on transforming performance management and core HR solutions, 
+            helping organizations better manage their talent and drive productivity. I combine 
+            data-driven insights with user empathy to build products that truly matter.
+          </p>
         </motion.div>
       </div>
     </section>

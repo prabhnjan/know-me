@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { Mail, Linkedin, Github, FileText } from "lucide-react";
 import { motion } from "motion/react";
+import { SectionIcon } from "./SectionIcon";
 
 export function Contact() {
   return (
@@ -12,7 +13,10 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-neutral-900 mb-4">Let's Connect</h2>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <SectionIcon type="contact" />
+            <h2 className="text-neutral-900">Let's Connect</h2>
+          </div>
           <p className="text-neutral-600 mb-12 max-w-2xl mx-auto">
             I'm always interested in hearing about new opportunities, collaborating on products, 
             or just having a conversation about product management and technology.

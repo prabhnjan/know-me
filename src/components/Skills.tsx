@@ -48,7 +48,6 @@ const skillCategories = [
       "HR Tech",
       "Enterprise SaaS",
       "Supply Chain",
-      "Mobile Apps",
       "B2B Products"
     ]
   }

@@ -1,12 +1,12 @@
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Experience } from "./components/Experience";
-import { Projects } from "./components/Projects";
-import { SideProjects } from "./components/SideProjects";
-import { Certifications } from "./components/Certifications";
-import { Skills } from "./components/Skills";
-import { Contact } from "./components/Contact";
-import { Passions } from "./components/Passions";
+// import { Projects } from "./components/Projects"; // HIDDEN
+import { SideProjects } from "@/components/SideProjects";
+import { Certifications } from "@/components/Certifications";
+import { Skills } from "@/components/Skills";
+import { Contact } from "@/components/Contact";
+import { Passions } from "@/components/Passions";
 
 export default function App() {
   return (
@@ -17,8 +17,7 @@ export default function App() {
           <div className="flex gap-8">
             <a href="#about" className="text-neutral-600 hover:text-neutral-900 transition-colors">About</a>
             <a href="#experience" className="text-neutral-600 hover:text-neutral-900 transition-colors">Experience</a>
-            <a href="#projects" className="text-neutral-600 hover:text-neutral-900 transition-colors">Projects</a>
-            <a href="#side-projects" className="text-neutral-600 hover:text-neutral-900 transition-colors">Side Projects</a>
+            <a href="#side-projects" className="text-neutral-600 hover:text-neutral-900 transition-colors">Projects</a>
             <a href="#certifications" className="text-neutral-600 hover:text-neutral-900 transition-colors">Certifications</a>
             <a href="#passions" className="text-neutral-600 hover:text-neutral-900 transition-colors">Passions</a>
             <a href="#contact" className="text-neutral-600 hover:text-neutral-900 transition-colors">Contact</a>
@@ -30,7 +29,7 @@ export default function App() {
         <Hero />
         <About />
         <Experience />
-        <Projects />
+        {/* <Projects /> */}
         <SideProjects />
         <Certifications />
         <Skills />

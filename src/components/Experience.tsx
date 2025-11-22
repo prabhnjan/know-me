@@ -3,36 +3,41 @@ import { SectionIcon } from "./SectionIcon";
 
 const experiences = [
   {
-    title: "Senior Product Manager",
-    company: "HR Tech Company",
-    period: "2022 - Present",
-    description: "Leading product development for performance management and core HR suite. Shipped features used by 100k+ employees across Fortune 500 companies.",
-    achievements: [
-      "Increased user adoption by 85% through improved onboarding flow",
-      "Launched 360-degree review system handling 50k+ reviews quarterly",
-      "Reduced time-to-hire by 30% with streamlined recruitment module"
-    ]
-  },
-  {
-    title: "Product Manager",
-    company: "Healthcare Tech Startup",
-    period: "2020 - 2022",
-    description: "Built end-to-end supply chain platform for hospital networks managing medical equipment and pharmaceuticals.",
-    achievements: [
-      "Managed $50M+ in inventory across 30+ hospital networks",
-      "Reduced procurement costs by 25% through AI-powered automation",
-      "Integrated with major EHR systems for seamless operations"
-    ]
-  },
-  {
     title: "Associate Product Manager",
-    company: "Enterprise Software Company",
-    period: "2018 - 2020",
-    description: "Worked on B2B SaaS products for mid-market companies, focusing on workflow automation and analytics.",
+    company: "greytHR",
+    period: "Sep 2024 – Present",
+    description: "Leading end-to-end development of Performance Management System with AI-driven capabilities.",
     achievements: [
-      "Launched 3 major features with 95%+ customer satisfaction",
-      "Conducted 100+ user interviews to inform product roadmap",
-      "Collaborated with 20+ engineers across distributed teams"
+      "Led development of Performance Management System including Goals & OKRs, Performance Reviews, 360° Feedback, Calibration, and Performance Library & Surveys",
+      "Drove exponential business growth, increasing MRR from ₹6L to ₹23L in one year through feature adoption and PLG-led usage expansion",
+      "Built and integrated AI-driven capabilities across workflows (AI summaries, feedback insights, calibration intelligence, behavioral pattern detection)",
+      "Conducted deep market and competitive research, benchmarking global performance systems",
+      "Scaled Performance Management System to mobile experiences, enhancing accessibility for managers and employees"
+    ]
+  },
+  {
+    title: "Business Analyst",
+    company: "Infor",
+    period: "Nov 2022 – Sep 2024",
+    description: "Owned full product lifecycle for enterprise Finance & Supply Chain capabilities.",
+    achievements: [
+      "Implemented 9 automation use cases that reduced process cycle times by 60% for global customers",
+      "Designed and delivered 11 role-based workspaces, improving cross-functional team efficiency",
+      "Defined product specifications for procurement, inventory, vendor management, invoicing, and contract processes",
+      "Integrated advanced technologies — AI, GenAI, RPA, chatbots, OCR, Data Fabric, Data Lake pipelines, APIs",
+      "Supported customer demos, pre-sales engagements, training, and adoption initiatives across enterprise rollouts"
+    ]
+  },
+  {
+    title: "Associate Business Analyst",
+    company: "Infor",
+    period: "Oct 2020 – Nov 2022",
+    description: "Managed supply-chain product lifecycle enhancements for mid-to-large enterprises.",
+    achievements: [
+      "Improved supply cycle times by 30% for mid-to-large enterprises",
+      "Enhanced platform adoption by 15% through customer-driven improvements and usability enhancements",
+      "Built integrations using API Gateway, ION, AI, and NLP chatbots for procurement automation",
+      "Collaborated with cross-functional teams for requirements, demos, and iterative improvements"
     ]
   }
 ];

@@ -1,25 +1,23 @@
-import { Card } from "@/components/ui/card";
+import { Card } from "./ui/card";
 import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import { SectionIcon } from "./SectionIcon";
 
 const certifications = [
   {
-    name: "ISP Certified Product Manager",
-    issuer: "ISP Certification Board",
-    date: "2023",
-    credentialId: "ISP-PM-2023-XXXX",
-    description: "Advanced certification demonstrating expertise in product strategy, user research, and agile methodologies.",
-    link: "#" // TODO: Add actual credential link later
+    name: "Product Management",
+    issuer: "Indian School of Business",
+    date: "2024",
+    description: "Comprehensive certification in product management covering product strategy, user research, roadmap planning, and agile methodologies from one of India's premier business schools.",
+    link: "https://www.credential.net/d3863775-5d1c-4fde-b28e-88b5f19569da#acc.TxnsD5hz"
   },
   {
-    name: "Certified Scrum Product Owner (CSPO)",
-    issuer: "Scrum Alliance",
-    date: "2022",
-    credentialId: "CSPO-XXXX",
-    description: "Professional certification in agile product ownership and backlog management.",
-    link: "#" // TODO: Add actual credential link later
+    name: "Product-Led Certified",
+    issuer: "Pendo.io",
+    date: "2024",
+    description: "Professional certification in product-led growth strategies, user analytics, in-app guidance, and data-driven product development from the leading product experience platform.",
+    link: "https://www.credly.com/badges/bb7b209f-3db1-46fd-8ef4-ac1014073f6d/public_url"
   }
 ];
 
@@ -76,21 +74,16 @@ export function Certifications() {
                     <p className="text-neutral-500">
                       <span>Issued:</span> {cert.date}
                     </p>
-                    <p className="text-neutral-500">
-                      <span>Credential ID:</span> {cert.credentialId}
-                    </p>
                   </div>
                   
-                  {cert.link !== "#" && (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => window.open(cert.link, '_blank')}
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      View Credential
-                    </Button>
-                  )}
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => window.open(cert.link, '_blank')}
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View Certificate
+                  </Button>
                 </div>
               </Card>
             </motion.div>

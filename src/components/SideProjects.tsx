@@ -1,33 +1,22 @@
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card } from "./ui/card";
+import { Badge } from "./ui/badge";
 import { motion } from "motion/react";
-import { Github, ExternalLink, Smartphone } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Globe, Sparkles } from "lucide-react";
+import { Button } from "./ui/button";
 import { SectionIcon } from "./SectionIcon";
 
 const sideProjects = [
   {
-    title: "TaskFlow - Productivity App",
-    description: "A mobile-first productivity app for iOS that helps users manage tasks, set goals, and track daily progress. Built with a focus on simplicity and beautiful design.",
-    platform: "iOS App Store",
+    title: "Personal Portfolio Website",
+    description: "Designed and built this entire portfolio website from scratch using AI assistance. Demonstrates my technical fluency, design sensibility, and ability to leverage cutting-edge AI tools to bring product visions to life independently.",
+    platform: "Web",
     status: "Live",
-    link: "#", // TODO: Add App Store link later
-    github: "https://github.com/prabhnjan/taskflow", // TODO: Update when repo is ready
-    stats: "1k+ downloads, 4.7★ rating",
-    tags: ["iOS", "Swift", "Mobile App", "Productivity"],
-    icon: <Smartphone className="w-5 h-5" />
-  },
-  {
-    title: "Product Manager's Toolkit",
-    description: "Open-source collection of templates, frameworks, and tools for product managers. Includes PRD templates, roadmap planners, and prioritization matrices.",
-    platform: "GitHub",
-    status: "Active Development",
     link: null,
-    github: "https://github.com/prabhnjan/pm-toolkit", // TODO: Update when repo is ready
-    stats: "500+ stars on GitHub",
-    tags: ["Open Source", "Product Management", "Templates"],
-    icon: <Github className="w-5 h-5" />
-  }
+    github: "https://github.com/prabhnjan/prabhanjan",
+    stats: "Built with React, TypeScript, Tailwind CSS, and Framer Motion",
+    tags: ["AI-Powered", "React", "TypeScript", "Design", "Full-Stack"],
+    icon: <Sparkles className="w-5 h-5" />
+  },
 ];
 
 export function SideProjects() {
@@ -42,10 +31,10 @@ export function SideProjects() {
         >
           <div className="flex items-center gap-4 mb-4">
             <SectionIcon type="sideProjects" />
-            <h2 className="text-neutral-900">Side Projects</h2>
+            <h2 className="text-neutral-900">Side Projects & Initiatives</h2>
           </div>
           <p className="text-neutral-600 mb-12">
-            Building products independently, from concept to launch
+            Building and experimenting independently, leveraging AI to bring ideas to life
           </p>
         </motion.div>
         
@@ -80,7 +69,7 @@ export function SideProjects() {
                 <p className="text-neutral-600 mb-4">{project.description}</p>
                 
                 <p className="text-neutral-700 mb-4">
-                  <span className="text-neutral-500">Impact:</span> {project.stats}
+                  <span className="text-neutral-500">Tech:</span> {project.stats}
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -92,25 +81,16 @@ export function SideProjects() {
                 </div>
                 
                 <div className="flex gap-3">
-                  {project.link && project.link !== "#" && (
+                  {project.github && (
                     <Button
-                      variant="default"
+                      variant="outline"
                       size="sm"
-                      className="bg-neutral-900 hover:bg-neutral-800"
-                      onClick={() => window.open(project.link, '_blank')}
+                      onClick={() => window.open(project.github, '_blank')}
                     >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      View on {project.platform}
+                      <Globe className="w-4 h-4 mr-2" />
+                      View on GitHub
                     </Button>
                   )}
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => window.open(project.github, '_blank')}
-                  >
-                    <Github className="w-4 h-4 mr-2" />
-                    View on GitHub
-                  </Button>
                 </div>
               </Card>
             </motion.div>
