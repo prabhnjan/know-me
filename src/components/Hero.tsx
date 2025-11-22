@@ -107,13 +107,14 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Profile Photo Placeholder */}
+          {/* Creative Photo Display */}
           <motion.div 
             className="relative h-96 flex items-center justify-center"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
+            {/* Animated geometric frame */}
             <div className="relative">
               {/* Rotating border rings */}
               <motion.div
@@ -124,7 +125,8 @@ export function Hero() {
                   border: "2px solid #3b82f6",
                   top: "50%",
                   left: "50%",
-                  transform: "translate(-50%, -50%)",
+                  x: "-50%",
+                  y: "-50%",
                 }}
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -137,23 +139,64 @@ export function Hero() {
                   border: "2px dashed #8b5cf6",
                   top: "50%",
                   left: "50%",
-                  transform: "translate(-50%, -50%)",
+                  x: "-50%",
+                  y: "-50%",
                 }}
                 animate={{ rotate: -360 }}
                 transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
               />
               
-              {/* Profile photo */}
+              {/* Floating dots around photo */}
               <motion.div
-                className="relative rounded-full overflow-hidden w-64 h-64 border-4 border-white shadow-2xl bg-gradient-to-br from-blue-100 to-purple-100"
+                className="absolute w-3 h-3 bg-blue-500 rounded-full"
+                style={{ top: "-10px", left: "50%", x: "-50%" }}
+                animate={{
+                  y: [-5, 5, -5],
+                }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <motion.div
+                className="absolute w-3 h-3 bg-purple-500 rounded-full"
+                style={{ bottom: "-10px", right: "20%" }}
+                animate={{
+                  y: [5, -5, 5],
+                }}
+                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <motion.div
+                className="absolute w-3 h-3 bg-cyan-500 rounded-full"
+                style={{ top: "30%", left: "-10px" }}
+                animate={{
+                  x: [-5, 5, -5],
+                }}
+                transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <motion.div
+                className="absolute w-3 h-3 bg-pink-500 rounded-full"
+                style={{ top: "60%", right: "-10px" }}
+                animate={{
+                  x: [5, -5, 5],
+                }}
+                transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
+              />
+
+              {/* Profile photo with animated border */}
+              <motion.div
+                className="relative rounded-full overflow-hidden w-64 h-64 border-4 border-white shadow-2xl"
                 animate={{
                   y: [0, -10, 0],
                 }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               >
-                <div className="w-full h-full flex items-center justify-center text-6xl">
-                  👨‍💼
-                </div>
+                <img 
+                  src="/profile.png" 
+                  alt="Prabhanjan Kulkarni" 
+                  className="w-full h-full object-cover"
+                />
+                {/* Gradient overlay on hover */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent opacity-0 hover:opacity-100 transition-opacity"
+                />
               </motion.div>
             </div>
           </motion.div>

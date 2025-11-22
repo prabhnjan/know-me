@@ -1,8 +1,9 @@
-import { Card } from "./ui/card";
-import { Badge } from "./ui/badge";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { motion } from "motion/react";
 import { Github, ExternalLink, Smartphone } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
+import { SectionIcon } from "./SectionIcon";
 
 const sideProjects = [
   {
@@ -39,7 +40,10 @@ export function SideProjects() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-neutral-900 mb-4">Side Projects</h2>
+          <div className="flex items-center gap-4 mb-4">
+            <SectionIcon type="sideProjects" />
+            <h2 className="text-neutral-900">Side Projects</h2>
+          </div>
           <p className="text-neutral-600 mb-12">
             Building products independently, from concept to launch
           </p>

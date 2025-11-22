@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { SectionIcon } from "./SectionIcon";
 
 export function About() {
   return (
@@ -10,7 +11,10 @@ export function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-neutral-900 mb-8">About Me</h2>
+          <div className="flex items-center gap-4 mb-8">
+            <SectionIcon type="about" />
+            <h2 className="text-neutral-900">About Me</h2>
+          </div>
           <div className="space-y-4 text-neutral-600">
             <p>
               I'm a Product Manager with a passion for building enterprise solutions that solve 

@@ -1,7 +1,8 @@
-import { Card } from "./ui/card";
+import { Card } from "@/components/ui/card";
 import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
+import { SectionIcon } from "./SectionIcon";
 
 const certifications = [
   {
@@ -32,7 +33,10 @@ export function Certifications() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-neutral-900 mb-12">Certifications</h2>
+          <div className="flex items-center gap-4 mb-12">
+            <SectionIcon type="certifications" />
+            <h2 className="text-neutral-900">Certifications</h2>
+          </div>
         </motion.div>
         
         <div className="grid md:grid-cols-2 gap-6">

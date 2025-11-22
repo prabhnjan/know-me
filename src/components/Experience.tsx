@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { SectionIcon } from "./SectionIcon";
 
 const experiences = [
   {
@@ -40,15 +41,18 @@ export function Experience() {
   return (
     <section id="experience" className="py-20 px-6">
       <div className="max-w-5xl mx-auto">
-        <motion.h2 
-          className="text-neutral-900 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          Experience
-        </motion.h2>
+        <div className="flex items-center gap-4 mb-12">
+          <SectionIcon type="experience" />
+          <motion.h2 
+            className="text-neutral-900"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            Experience
+          </motion.h2>
+        </div>
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <motion.div
