@@ -27,7 +27,7 @@ export default function App() {
 
       <footer className="border-t border-neutral-200 py-8">
         <div className="max-w-5xl mx-auto px-6 text-center text-neutral-600">
-          <p>© 2025 All rights reserved.</p>
+          <p>© 2025 .Prabhanjan Kulkarni. All rights reserved.</p>
         </div>
       </footer>
     </div>
