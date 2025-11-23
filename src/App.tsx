@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { initGA, logPageView } from './utils/analytics';
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Experience } from "@/components/Experience";
@@ -10,6 +12,12 @@ import { Passions } from "@/components/Passions";
 import { LinkedInPosts } from "@/components/LinkedInPosts";
 
 export default function App() {
+  useEffect(() => {
+    // Initialize Google Analytics
+    initGA();
+    logPageView();
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <main>

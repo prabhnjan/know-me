@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { logEvent } from "../utils/analytics";
 
 export function Hero() {
   return (
@@ -95,6 +96,7 @@ export function Hero() {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-neutral-600 hover:text-neutral-900 transition-colors"
+                onClick={() => logEvent('Hero', 'Click', 'GitHub Link')}
               >
                 <Github className="w-6 h-6" />
               </a>
@@ -103,12 +105,14 @@ export function Hero() {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-neutral-600 hover:text-neutral-900 transition-colors"
+                onClick={() => logEvent('Hero', 'Click', 'LinkedIn Link')}
               >
                 <Linkedin className="w-6 h-6" />
               </a>
               <a 
                 href="mailto:prabhanjan.kulkarni@yahoo.com"
                 className="text-neutral-600 hover:text-neutral-900 transition-colors"
+                onClick={() => logEvent('Hero', 'Click', 'Email Link')}
               >
                 <Mail className="w-6 h-6" />
               </a>

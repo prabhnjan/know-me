@@ -2,6 +2,7 @@ import { Button } from "./ui/button";
 import { Mail, Linkedin, Github, FileText } from "lucide-react";
 import { motion } from "motion/react";
 import { SectionIcon } from "./SectionIcon";
+import { logEvent } from "../utils/analytics";
 
 export function Contact() {
   return (
@@ -33,28 +34,40 @@ export function Contact() {
           <Button 
             variant="default" 
             className="bg-neutral-900 hover:bg-neutral-800"
-            onClick={() => window.location.href = 'mailto:prabhanjan.kulkarni@yahoo.com'}
+            onClick={() => {
+              logEvent('CTA', 'Click', 'Email Button');
+              window.location.href = 'mailto:prabhanjan.kulkarni@yahoo.com';
+            }}
           >
             <Mail className="mr-2 h-4 w-4" />
             Email Me
           </Button>
           <Button 
             variant="outline"
-            onClick={() => window.open('https://www.linkedin.com/in/prabhanjn-kulkarni/', '_blank')}
+            onClick={() => {
+              logEvent('CTA', 'Click', 'LinkedIn Button');
+              window.open('https://www.linkedin.com/in/prabhanjn-kulkarni/', '_blank');
+            }}
           >
             <Linkedin className="mr-2 h-4 w-4" />
             LinkedIn
           </Button>
           <Button 
             variant="outline"
-            onClick={() => window.open('https://github.com/prabhnjan', '_blank')}
+            onClick={() => {
+              logEvent('CTA', 'Click', 'GitHub Button');
+              window.open('https://github.com/prabhnjan', '_blank');
+            }}
           >
             <Github className="mr-2 h-4 w-4" />
             GitHub
           </Button>
           <Button 
             variant="outline"
-            onClick={() => window.open('/know-me/resume.pdf', '_blank')}
+            onClick={() => {
+              logEvent('CTA', 'Click', 'Resume Download');
+              window.open('/know-me/resume.pdf', '_blank');
+            }}
           >
             <FileText className="mr-2 h-4 w-4" />
             Resume
