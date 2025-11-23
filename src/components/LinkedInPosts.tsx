@@ -5,24 +5,18 @@ export function LinkedInPosts() {
   const posts = [
     {
       id: 1,
-      title: "Building AI-Powered Performance Management Systems",
-      excerpt: "Sharing insights on integrating AI across performance workflows, from goal setting to calibration intelligence...",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&auto=format&fit=crop",
-      link: "https://www.linkedin.com/feed/update/urn:li:share:7397113181078470657",
-      engagement: "View on LinkedIn",
+      content: "Honestly, fear of AI is turning into a full self-fulfilling prophecy. The more you avoid it, the faster it replaces you. 👀\n\nIt's no longer just simple denial; it's active self-sabotage.\n\nLet me explain: My observation is that people are so afraid of AI making them irrelevant, they're not even trying to learn the skills that would keep them relevant.\n\nThat fear-driven inaction? It's the very thing making the fear come true.",
+      link: "https://www.linkedin.com/posts/prabhanjn-kulkarni_honestly-fear-of-ai-is-turning-into-a-full-activity-7397113181703163905-dL-s?utm_source=share&utm_medium=member_desktop&rcm=ACoAADopuiQBmDndFxrRlGiEsKjkE378iOxiG3Y",
     },
     {
       id: 2,
-      title: "Product Management Insights & Experiences",
-      excerpt: "Lessons learned from scaling products, driving growth, and building systems that matter...",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
-      link: "https://www.linkedin.com/feed/update/urn:li:share:7296957673160224769",
-      engagement: "View on LinkedIn",
+      content: "Jurassic Park had everything: technology, spectacle & praise; but one broken fence turned it into chaos.\n\nYour product is the same. Don't just guard the gates. Guard the damn cracks!",
+      link: "https://www.linkedin.com/posts/prabhanjn-kulkarni_jurassic-park-had-everything-technology-activity-7389934684442394624-6elp?utm_source=share&utm_medium=member_desktop&rcm=ACoAADopuiQBmDndFxrRlGiEsKjkE378iOxiG3Y",
     },
   ];
 
   return (
-    <section id="linkedin" className="py-24 px-6 bg-white relative overflow-hidden">
+    <section id="linkedin" className="py-12 px-6 bg-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 right-10 w-64 h-64 bg-blue-100 rounded-full blur-3xl" />
@@ -35,18 +29,15 @@ export function LinkedInPosts() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Linkedin className="w-8 h-8 text-blue-600" />
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <Linkedin className="w-6 h-6 text-blue-600" />
             <h2 className="text-neutral-900">Thought Leadership</h2>
           </div>
-          <p className="text-neutral-600 max-w-2xl mx-auto">
-            Sharing insights on product management, HR technology, and AI-powered solutions
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
           {posts.map((post, index) => (
             <motion.a
               key={post.id}
@@ -57,46 +48,23 @@ export function LinkedInPosts() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="group relative bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-blue-300 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+              className="group relative bg-white rounded-xl overflow-hidden border border-neutral-200 hover:border-blue-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
             >
-              {/* Post Image */}
-              <div className="relative h-64 overflow-hidden bg-neutral-100">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 right-4">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-3">
-                      <ExternalLink className="w-5 h-5 text-blue-600" />
-                    </div>
-                  </div>
-                </div>
-                {/* LinkedIn badge */}
-                <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full flex items-center gap-2">
-                  <Linkedin className="w-4 h-4" />
-                  <span className="text-sm">Post</span>
-                </div>
-              </div>
-
               {/* Post Content */}
-              <div className="p-6">
-                <h3 className="text-neutral-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-neutral-600 mb-4 line-clamp-2">
-                  {post.excerpt}
-                </p>
-                <div className="flex items-center text-neutral-500 text-sm">
-                  <span>{post.engagement}</span>
+              <div className="p-4">
+                <div className="flex items-center gap-2 mb-3">
+                  <Linkedin className="w-4 h-4 text-blue-600" />
+                  <p className="text-neutral-500 text-sm">Prabhanjan Kulkarni</p>
+                  <ExternalLink className="w-3 h-3 ml-auto text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
+                <p className="text-neutral-700 text-sm line-clamp-4 whitespace-pre-line">
+                  {post.content}
+                </p>
               </div>
 
               {/* Animated border effect */}
               <motion.div
-                className="absolute inset-0 border-2 border-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                className="absolute inset-0 border-2 border-blue-500 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"
                 animate={{
                   scale: [1, 1.02, 1],
                 }}
@@ -118,13 +86,12 @@ export function LinkedInPosts() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center"
         >
-          
+          <a
             href="https://www.linkedin.com/in/prabhanjn-kulkarni/recent-activity/all/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all duration-300 hover:shadow-lg hover:scale-105 group"
+            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors group text-sm"
           >
-            <Linkedin className="w-5 h-5" />
             <span>View All My Posts on LinkedIn</span>
             <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
