@@ -11,9 +11,7 @@ const experiences = [
     achievements: [
       "Led development of Performance Management System including Goals & OKRs, Performance Reviews, 360° Feedback, Calibration, and Performance Library & Surveys",
       "Drove exponential business growth, increasing MRR from ₹6L to ₹23L in one year through feature adoption and PLG-led usage expansion",
-      "Built and integrated AI-driven capabilities across workflows (AI summaries, feedback insights, calibration intelligence, behavioral pattern detection)",
-      "Conducted deep market and competitive research, benchmarking global performance systems",
-      "Scaled Performance Management System to mobile experiences, enhancing accessibility for managers and employees"
+      "Conducted deep market and competitive research, benchmarking global performance systems"
     ]
   },
   {
